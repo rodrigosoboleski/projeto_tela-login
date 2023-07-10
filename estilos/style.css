@@ -1,0 +1,161 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+:root {
+    --cor0: #008080;
+    --cor1: #C5E063;
+    --cor2: #A5BE00;
+    --cor3: #6EB257;
+    --cor4: #6C5A49;
+    --cor5: #005858;
+
+    --fonte-titulo: 'Satisfy', cursive;
+}
+
+*{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body, html{
+    background-color: var(--cor0);
+    width: 100vw;
+    height: 100vh;
+}
+
+main{
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1{
+    font-family: var(--fonte-titulo);
+    font-size: 2em;
+}
+h3{
+    margin-bottom: 6px;
+}
+
+section#login{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    overflow: hidden;
+
+    background-color: white;
+    width: 280px;
+    height: 605px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.470);
+
+    transition: width 1s, heigth 1s;
+    transition-timing-function: ease;
+    transform: translate(-50%, -50%);
+}
+
+section#login > div#imagem{
+    display: block;
+    background: green url(../imagens/suco.verde.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+}
+
+section#login > div#formulario{
+    display: block;
+    padding: 10px;
+}
+
+div#formulario > h1, h3{
+    text-align: center;
+}
+
+
+div#formulario > p{
+    font-size: 0.8em;
+}
+
+form > input[type=submit]{
+    display: block;
+    margin: auto;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor3);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover{
+    background-color: var(--cor2);
+    width: 95%;
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+
+form > a.botao{
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--cor3);
+    color: white;
+    border: 1px solid var(--cor3);
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    padding-top: 10px;
+    margin-top: 5px;
+}
+
+form > a.botao > i {
+    font-size: 0.8em;
+    padding: 5px;
+}
+
+form > a.botao:hover{
+    background-color: var(--cor2);
+    width: 95%;
+    transition: 0.5s;
+    transition-timing-function: ease;
+}
+
+form > div.campo{
+    display: block;
+    background-color: var(--cor5);
+    border: 3px solid var(--cor5);
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0px;
+}
+
+div.campo > i{
+    color: white;
+    font-size: 2em;
+    width: 40px;
+    padding: 4px;
+}
+
+div.campo > input{
+    background-color: white;
+    font-size: 1em;
+    width: calc(100% - 45px);
+    height: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    transform: translateY(-13px);
+}
+
+form label{
+    display: none;
+}
